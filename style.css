@@ -23,37 +23,38 @@ html h3, body h3 {
   background: #c7b683;
   max-width: 80em;
   margin: 2em auto;
-  border: 2px solid black;
+  border: 2px solid #c7b683;
 }
 .horizontal-scroll .hide {
   display: none;
 }
 .horizontal-scroll .box {
-  padding: 10px;
-  width: 25em;
+  width: 400px;
   background-color: white;
-  border: 2px solid black;
   margin: 1em;
-  overflow: auto;
+  overflow: hidden;
 }
 .horizontal-scroll .box img {
   width: 100%;
+  min-height: 275px;
   max-height: 275px;
-  border: 2px solid black;
 }
 .horizontal-scroll .box iframe {
   border: 2px solid white;
 }
-.horizontal-scroll .box h3 {
-  font-size: 1.75rem;
-  padding-top: 0;
+.horizontal-scroll .box .text {
+  padding: 0.5em 1em;
+}
+.horizontal-scroll .box .text h3 {
+  font-size: 1.5rem;
+  padding: 0;
   margin-top: 10px;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
-.horizontal-scroll .box p {
-  font-size: 1.2rem;
+.horizontal-scroll .box .text p {
+  font-size: 1rem;
 }
-.horizontal-scroll .box .button {
+.horizontal-scroll .box .text .button {
   text-decoration: none;
   color: white;
   background-color: black;
@@ -65,7 +66,16 @@ html h3, body h3 {
   text-transform: uppercase;
   border: 1px solid black;
 }
-.horizontal-scroll .box .button:hover {
+.horizontal-scroll .box .text .button:hover {
   background-color: white;
   color: black;
+}
+
+@media screen and (min-width: 800px) {
+  .horizontal-scroll .box {
+    width: 800px;
+  }
+  .horizontal-scroll .box img {
+    max-height: unset;
+  }
 }
